@@ -1,4 +1,4 @@
-# Lab 4：雲端管控
+# Lab 4：雲端管控test
 
 在 Raspberry Pi 4 上部署 code-server。
 
