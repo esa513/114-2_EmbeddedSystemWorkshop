@@ -1,4 +1,4 @@
-# Lab 4：雲端管控test
+# Lab 4：雲端管控
 
 在 Raspberry Pi 4 上部署 code-server。
 
@@ -6,14 +6,14 @@
 
 先更新套件索引，並安裝流程會用到的 `curl` 與 `tar`。
 
-```bash
+```text
 sudo apt update
 sudo apt install -y curl tar
 ```
 
 接著使用官方 install script 的 `standalone` 方式安裝 code-server。此方式適合 arm64，且可避開較多原生模組編譯問題。
 
-```bash
+```text
 curl -fsSL https://code-server.dev/install.sh | sh -s -- --method=standalone
 ```
 
@@ -21,13 +21,13 @@ curl -fsSL https://code-server.dev/install.sh | sh -s -- --method=standalone
 
 第一次啟動後，系統會自動建立設定檔，位置通常如下。
 
-```bash
+```text
 cat ~/.config/code-server/config.yaml
 ```
 
 安裝完成後，可先直接執行下列指令，確認 code-server 可以正常啟動。
 
-```bash
+```text
 ~/.local/bin/code-server
 ```
 
@@ -39,13 +39,13 @@ cat ~/.config/code-server/config.yaml
 
 預設情況下，code-server 只會綁定在本機的 `127.0.0.1:8080`。若希望同一區網內的電腦也能透過瀏覽器連入 Raspberry Pi，就需要修改設定檔。
 
-```bash
+```text
 nano ~/.config/code-server/config.yaml
 ```
 
-請將內容調整為下列範例
+請將內容調整為下列範例：
 
-```bash
+```text
 bind-addr: 0.0.0.0:8080
 auth: password
 password: raspberry
@@ -54,20 +54,18 @@ cert: false
 
 ![image](assets/4-3.png)
 
-完成後按 `Ctrl + X`，再按 `Y` 與 `Enter` 儲存並離開
+完成後按 `Ctrl + X`，再按 `Y` 與 `Enter` 儲存並離開。
 
 修改完成後，重新啟動 code-server，讓新設定生效。
 
-```bash
+```text
 pkill -f code-server
 ~/.local/bin/code-server
 ```
 
 之後即可在同一區網的其他電腦上，以瀏覽器開啟下列網址登入。
 
-```bash
-http://(你的RPi板的IP):8080
-```
+可輸入 `http://(你的RPi板的IP):8080`。
 
 例如：若 Raspberry Pi 的 IP 是 `192.168.50.33`，則可輸入 `http://192.168.50.33:8080`。
 
