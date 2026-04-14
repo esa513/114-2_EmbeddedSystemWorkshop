@@ -4,11 +4,11 @@
 
 ## 1) 安裝主程式與相依套件
 
-先更新套件索引，並安裝流程會用到的 `curl` 與 `tar`。
+先更新套件索引，並安裝流程會用到的套件。
 
 ```text
 sudo apt update
-sudo apt install -y curl tar
+sudo apt install -y curl tar python3-gpiozero
 ```
 
 接著使用官方 install script 的 `standalone` 方式安裝 code-server。此方式適合 arm64，且可避開較多原生模組編譯問題。
@@ -19,11 +19,7 @@ curl -fsSL https://code-server.dev/install.sh | sh -s -- --method=standalone
 
 ![image](assets/4-1.png)
 
-第一次啟動後，系統會自動建立設定檔，位置通常如下。
 
-```text
-cat ~/.config/code-server/config.yaml
-```
 
 安裝完成後，可先直接執行下列指令，確認 code-server 可以正常啟動。
 
@@ -33,7 +29,15 @@ cat ~/.config/code-server/config.yaml
 
 （按 `Ctrl + C` 可以終止伺服器）
 
+第一次啟動後，系統會自動建立設定檔，位置通常如下。
+
+```text
+cat ~/.config/code-server/config.yaml
+```
+
 ![image](assets/4-2.png)
+
+
 
 ## 2) 改成區網可連線
 

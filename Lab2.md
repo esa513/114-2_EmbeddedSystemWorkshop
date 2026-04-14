@@ -344,17 +344,12 @@ if __name__ == "__main__":
 在 Raspberry Pi 端執行：
 
 ```text
-cd ~/lab2
 python3 tflite.py --model model_unquant.tflite --labels labels.txt
 ```
 
 ![image](assets/2-19.png)
 
 
-按下 `q` 可離開程式。
 
 網路攝影機照射到的物體會顯示於畫面中。
-
-左邊的終端機會持續更新偵測到的物體與準確率。
-
 
