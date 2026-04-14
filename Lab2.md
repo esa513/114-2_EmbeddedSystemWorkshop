@@ -325,7 +325,7 @@ if __name__ == "__main__":
 
 使用 WinSCP（圖形化）把模型檔與 `labels.txt` 放到 Raspberry Pi 的 `~/lab2/`。
 
-下載：[WinSCP](https://cdn.winscp.net/files/WinSCP-6.5.6-Setup.exe?secure=qFcX0Lyh477gYatAWRDULQ==,1776153796)
+下載：[WinSCP](https://winscp.net/download/WinSCP-6.5.6-Setup.exe/download)
 
 ![image](assets/2-14.png)
 
