@@ -131,7 +131,7 @@ python -c "import tensorflow as tf; print(tf.__version__)"
 
 
 
-### 程式碼 `[tflite.py](https://github.com/esa513/114-2_EmbeddedSystemWorkshop/tree/master/code%20and%20model)`
+### 程式碼 [tflite.py](https://github.com/esa513/114-2_EmbeddedSystemWorkshop/tree/master/code%20and%20model)
 
 將以下程式碼存成 Raspberry Pi 的 `~/lab2/tflite.py`：
 
