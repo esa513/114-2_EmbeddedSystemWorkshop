@@ -1,6 +1,5 @@
 # Lab 2：視覺智慧
 
-
 ## 1) 使用 [Teachable Machine](https://teachablemachine.withgoogle.com/) 訓練資料
 
 點選 **Get Started** 後選擇 **Image Project**，並選擇 **Standard Image model**。
@@ -11,13 +10,11 @@
 
 ![image](assets/2-3.png)
 
-
 訓練資料可用 webcam 拍攝或選擇 upload 上傳。
 
 照片上傳完畢後，更改 **Class 名稱**（供後續辨識顯示）。
 
 ![image](assets/2-4.png)
-
 
 點選 **Train model** 進行訓練（設定皆使用預設值）。
 
@@ -31,7 +28,6 @@
 
 ![image](assets/2-6.png)
 
-
 ## 2) 安裝與設定 Raspberry Pi 端介面（OpenCV 前置）
 
 使用 VNC 進入 Raspberry Pi。
@@ -39,7 +35,6 @@
 點選 Raspberry Pi 圖示 → **偏好設定** → **Raspberry Pi 設定**。
 
 ![image](assets/2-7.png)
-
 
 切到 **介面**（Interfaces），將相關選項啟用並重新開機。
 
@@ -52,6 +47,7 @@
 ```text
 sudo apt update && sudo apt upgrade -y
 ```
+
 更新後建議重新開機。
 
 安裝常用工具與 Python 套件管理工具：
@@ -95,9 +91,6 @@ pyenv install 3.12.3
 
 ![image](assets/2-13.png)
 
-
-
-
 建立環境：
 
 ```text
@@ -125,13 +118,9 @@ python -c "import tensorflow as tf; print(tf.__version__)"
 
 ![image](assets/2-18.png)
 
-
-
 ## 4) 把模型和程式碼放到 Raspberry Pi
 
-
-
-### 程式碼 [tflite.py](code%20and%20model)
+### 程式碼 [tflite.py](https://github.com/esa513/114-2_EmbeddedSystemWorkshop/tree/master/code%20and%20model)
 
 將以下程式碼存成 Raspberry Pi 的 `~/lab2/tflite.py`：
 
@@ -337,8 +326,6 @@ if __name__ == "__main__":
 
 連接上 Webcam 至 Raspberry Pi USB 中。
 
-
-
 ### 執行方式
 
 在 Raspberry Pi 端執行：
@@ -349,7 +336,4 @@ python3 tflite.py --model model_unquant.tflite --labels labels.txt
 
 ![image](assets/2-19.png)
 
-
-
 網路攝影機照射到的物體會顯示於畫面中。
-
