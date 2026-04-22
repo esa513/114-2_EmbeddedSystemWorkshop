@@ -8,7 +8,7 @@
 ### Step 2：視覺智慧 ([Lab2](./Lab2.md))
 實作 OpenCV 與深度學習框架，讓你的樹莓派「看懂」世界，掌握 AI 影像辨識核心。
 
-### Step 3：無線鏈結 (Lab 3)
+### Step 3：無線鏈結 ([Lab 3](https://esa513.github.io/114-2_EmbeddedSystemWorkshop/Lab1.html#8-2-%E7%84%A1%E7%B7%9A%E9%80%A3%E6%8E%A5lab3))
 深入 WiFi 與 Bluetooth 設定，學習如何讓裝置與外界無縫溝通，實現真正的聯網功能。
 
 ### Step 4：雲端管控 ([Lab4](./Lab4.md))
